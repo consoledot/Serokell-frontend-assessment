@@ -1,0 +1,15 @@
+{
+  "name": "frontend-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o public/css --recursive",
+    "dev": "tsc -w && yarn run sass"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
