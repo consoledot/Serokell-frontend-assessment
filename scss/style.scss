@@ -1,3 +1,93 @@
-h1 {
-  color: red;
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+// Constants
+button {
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: large;
+}
+.section-title {
+  font-size: 3rem;
+  text-align: center;
+}
+header {
+  margin: 0;
+  height: 100vh;
+}
+nav {
+  display: flex;
+  // width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  height: 100px;
+  color: white;
+  position: fixed;
+  z-index: 30;
+  border: 1px solid red;
+  width: 100%;
+  .logo {
+    padding-left: 15rem;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    padding-right: 15rem;
+    li {
+      a {
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.header-section {
+  padding: 0rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  div {
+    text-align: center;
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    h1 {
+      font-size: 5rem;
+    }
+  }
+}
+
+main {
+  div {
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+    width: 90%;
+    // flex-wrap: wrap;
+    & > * {
+      width: 50%;
+    }
+    p {
+      padding: 3rem;
+      font-size: 1.3rem;
+      line-height: 2rem;
+      font-weight: lighter;
+    }
+  }
 }
