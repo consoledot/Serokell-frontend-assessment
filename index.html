@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="public/css/style.css" />
     <title>Sorekell</title>
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="navigation">
         <svg
           class="logo"
           xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +35,7 @@
       <section class="header-section">
         <div>
           <h1>Your expectations, lifted</h1>
-          <button><a>Contact Us</a></button>
+          <button id="contact-button"><a>Contact Us</a></button>
         </div>
       </section>
     </header>
@@ -56,10 +60,42 @@
           tenetur quas!
         </p>
         <img
+          class="main-right-image"
           src="https://www.oberlo.com/media/1603970279-pexels-photo-3.jpg?fit=max&fm=jpg&w=1824"
         />
       </div>
     </main>
+    <section class="section-contact" id="section-contact">
+      <h2 class="section-title">Contact Form</h2>
+      <form>
+        <input type="text" class="form__input" />
+        <input type="email" class="form__input" />
+        <textarea class="form__textarea"></textarea>
+        <div class="form--container-button">
+          <button>Submit</button>
+        </div>
+      </form>
+    </section>
+    <footer>
+      <div class="footer__container">
+        <div class="footer__container--list">
+          <ul class="footer__contacts--list">
+            <li><i class="fa fa-map-marker"></i>Address</li>
+            <li><i class="fa fa-phone"></i>Phone</li>
+            <li><i class="fa fa-envelope"></i>Email</li>
+          </ul>
+          <ul class="footer__link--list">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+            <li><a href="#">Link 5</a></li>
+            <li><a href="#">Link 6</a></li>
+          </ul>
+        </div>
+        <p class="footer__center-center">&copy;Copyright</p>
+      </div>
+    </footer>
   </body>
   <script src="./public/js/app.js"></script>
 </html>

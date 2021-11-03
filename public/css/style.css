@@ -11,6 +11,13 @@ button {
   cursor: pointer;
   font-size: large; }
 
+a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black; }
+  a:hover {
+    text-decoration: underline; }
+
 .section-title {
   font-size: 3rem;
   text-align: center; }
@@ -28,8 +35,9 @@ nav {
   color: white;
   position: fixed;
   z-index: 30;
-  border: 1px solid red;
   width: 100%; }
+  nav.navigation__fixed-background {
+    background-color: #cccccc; }
   nav .logo {
     padding-left: 15rem; }
   nav ul {
@@ -37,12 +45,6 @@ nav {
     list-style: none;
     gap: 3rem;
     padding-right: 15rem; }
-    nav ul li a {
-      font-size: 20px;
-      text-decoration: none;
-      color: black; }
-      nav ul li a:hover {
-        text-decoration: underline; }
 
 .header-section {
   padding: 0rem 2rem;
@@ -64,11 +66,68 @@ main div {
   display: flex;
   align-items: center;
   padding: 3rem 0;
-  width: 90%; }
+  width: 90%;
+  gap: 2rem; }
   main div > * {
     width: 50%; }
   main div p {
-    padding: 3rem;
+    padding: 3rem 6rem;
     font-size: 1.3rem;
     line-height: 2rem;
     font-weight: lighter; }
+
+.section-contact {
+  width: 100%;
+  margin: 2rem 0; }
+  .section-contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 50rem;
+    border: 1px solid black;
+    margin: 3rem auto;
+    padding: 1rem; }
+    .section-contact form .form__input,
+    .section-contact form .form__textarea {
+      padding: 1rem; }
+    .section-contact form .form__textarea {
+      resize: none;
+      height: 15rem; }
+    .section-contact form .form--container-button {
+      display: flex;
+      justify-content: end; }
+
+footer {
+  background-color: #999999;
+  margin-bottom: 0;
+  margin-right: auto;
+  padding: 2rem; }
+  footer .footer__container {
+    max-width: 80%; }
+  footer .footer__container--list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid white; }
+    footer .footer__container--list ul {
+      list-style: none; }
+      footer .footer__container--list ul li {
+        font-size: 18px;
+        color: white; }
+        footer .footer__container--list ul li a {
+          color: white; }
+    footer .footer__container--list .footer__contacts--list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem; }
+      footer .footer__container--list .footer__contacts--list li {
+        display: flex;
+        align-items: center;
+        gap: 1rem; }
+    footer .footer__container--list .footer__link--list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem; }
+  footer .footer__center-center {
+    text-align: center;
+    color: white; }
