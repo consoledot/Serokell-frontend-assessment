@@ -2,6 +2,8 @@
 // Declare varibales
 var navigation = document.getElementById("navigation");
 var contactButton = document.getElementById("contact-button");
+var menu = document.getElementById("menu");
+var dropdownList = document.getElementById("dropdown-list");
 var fixedBackground = "navigation__fixed-background";
 // Function to add background color to navigation
 window.addEventListener("scroll", function () {
@@ -17,3 +19,10 @@ var scrollToView = function (ref) {
 contactButton.addEventListener("click", function () {
     scrollToView("section-contact");
 });
+// Function to show dropdown
+var ToggleShow = function () {
+    navigation.classList.toggle("show");
+    menu.classList.toggle("show");
+    dropdownList.classList.toggle("show");
+};
+menu.addEventListener("click", ToggleShow);

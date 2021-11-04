@@ -1,0 +1,38 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+button {
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: large;
+}
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+section,
+main {
+  padding: 5rem 0;
+}
+.section-title {
+  font-size: 3rem;
+  text-align: center;
+}
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+@mixin MediaMd {
+  @media screen and (max-width: 769px) {
+    @content;
+  }
+}

@@ -12,11 +12,14 @@ button {
   font-size: large; }
 
 a {
-  font-size: 20px;
   text-decoration: none;
   color: black; }
   a:hover {
     text-decoration: underline; }
+
+section,
+main {
+  padding: 5rem 0; }
 
 .section-title {
   font-size: 3rem;
@@ -35,7 +38,27 @@ nav {
   color: white;
   position: fixed;
   z-index: 30;
-  width: 100%; }
+  width: 100%;
+  transition: all 0.5s ease-out; }
+  nav .navigation__logo_menu--container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    nav .navigation__logo_menu--container .navigation--menu {
+      display: none;
+      cursor: pointer; }
+      nav .navigation__logo_menu--container .navigation--menu div {
+        transition: all 0.5s ease-out;
+        height: 4px;
+        background-color: black;
+        margin: 6px 0;
+        border-radius: 5px; }
+        nav .navigation__logo_menu--container .navigation--menu div:nth-child(1) {
+          width: 25px; }
+        nav .navigation__logo_menu--container .navigation--menu div:nth-child(2) {
+          width: 35px; }
+        nav .navigation__logo_menu--container .navigation--menu div:nth-child(3) {
+          width: 20px; }
   nav.navigation__fixed-background {
     background-color: #cccccc; }
   nav .logo {
@@ -77,7 +100,6 @@ main div {
     font-weight: lighter; }
 
 .section-contact {
-  width: 100%;
   margin: 2rem 0; }
   .section-contact form {
     display: flex;
@@ -106,9 +128,9 @@ footer {
     max-width: 80%; }
   footer .footer__container--list {
     display: flex;
-    width: 100%;
     justify-content: space-between;
-    border-bottom: 1px solid white; }
+    border-bottom: 1px solid white;
+    padding-right: 7rem; }
     footer .footer__container--list ul {
       list-style: none; }
       footer .footer__container--list ul li {
@@ -131,3 +153,71 @@ footer {
   footer .footer__center-center {
     text-align: center;
     color: white; }
+
+@media screen and (max-width: 769px) {
+  .section-title {
+    font-size: 1.5rem; }
+  button {
+    padding: 0.7rem 1.5rem;
+    font-size: medium; }
+  nav {
+    flex-direction: column; }
+    nav.show {
+      background-color: #cccccc; }
+    nav ul {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      background-color: #cccccc;
+      padding: 1rem; }
+      nav ul.show {
+        display: flex;
+        transition: all 0.5s ease-out; }
+      nav ul li {
+        padding: 0 1rem; }
+    nav .navigation__logo_menu--container {
+      width: 100%;
+      padding: 0.5rem; }
+      nav .navigation__logo_menu--container .navigation--menu {
+        display: block;
+        padding-right: 1rem; }
+        nav .navigation__logo_menu--container .navigation--menu.show div:nth-child(1) {
+          transform: translate(10px) rotate(45deg); }
+        nav .navigation__logo_menu--container .navigation--menu.show div:nth-child(2) {
+          transform: translateY(5px) translateX(5px); }
+        nav .navigation__logo_menu--container .navigation--menu.show div:nth-child(3) {
+          transform: translateY(-20px) translateX(10px) rotate(-45deg);
+          width: 25px; }
+    nav .logo {
+      padding-left: 0rem; }
+  .header-section {
+    padding: 0 1rem; }
+    .header-section div {
+      padding: 0 1rem; }
+      .header-section div h1 {
+        font-size: 2rem; }
+  main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    main div {
+      flex-direction: column;
+      padding: 1rem 0;
+      gap: 0.5rem;
+      align-items: center; }
+      main div > * {
+        width: 100%; }
+      main div p {
+        padding: 1rem;
+        font-size: 1rem;
+        line-height: 1.5rem; }
+      main div.main__content--second {
+        flex-direction: column-reverse; }
+  .section-contact form {
+    max-width: 80%; }
+  footer .footer__container--list {
+    padding-right: 2rem;
+    flex-direction: column; }
+    footer .footer__container--list ul li {
+      font-size: 14px; } }

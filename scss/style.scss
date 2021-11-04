@@ -1,30 +1,5 @@
-body {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
+@import "config";
 
-// Constants
-button {
-  border: 1px solid black;
-  padding: 1rem 2rem;
-  background-color: white;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: large;
-}
-a {
-  font-size: 20px;
-  text-decoration: none;
-  color: black;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-.section-title {
-  font-size: 3rem;
-  text-align: center;
-}
 header {
   margin: 0;
   height: 100vh;
@@ -39,6 +14,35 @@ nav {
   position: fixed;
   z-index: 30;
   width: 100%;
+  .navigation__logo_menu--container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .navigation--menu {
+      display: none;
+      cursor: pointer;
+      div {
+        @include easeOut;
+        height: 4px;
+        background-color: black;
+        margin: 6px 0;
+        border-radius: 5px;
+
+        &:nth-child(1) {
+          width: 25px;
+        }
+
+        &:nth-child(2) {
+          width: 35px;
+        }
+
+        &:nth-child(3) {
+          width: 20px;
+        }
+      }
+    }
+  }
+  @include easeOut;
   &.navigation__fixed-background {
     background-color: #cccccc;
   }
@@ -50,8 +54,6 @@ nav {
     list-style: none;
     gap: 3rem;
     padding-right: 15rem;
-    li {
-    }
   }
 }
 
@@ -97,7 +99,7 @@ main {
 }
 
 .section-contact {
-  width: 100%;
+  // width: 100%;
   margin: 2rem 0;
   form {
     display: flex;
@@ -131,9 +133,9 @@ footer {
   }
   .footer__container--list {
     display: flex;
-    width: 100%;
     justify-content: space-between;
     border-bottom: 1px solid white;
+    padding-right: 7rem;
     ul {
       list-style: none;
       li {
@@ -165,3 +167,5 @@ footer {
     color: white;
   }
 }
+
+@import "mobile";
