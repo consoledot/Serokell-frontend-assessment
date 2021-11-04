@@ -1,3 +1,10 @@
+$grey: #cccccc;
+$white: white;
+$grey-secondary: #999999;
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -11,10 +18,15 @@ button {
   font-weight: bold;
   cursor: pointer;
   font-size: large;
+  @include easeOut;
+  &:hover {
+    background-color: $grey;
+    color: $white;
+  }
 }
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
   &:hover {
     text-decoration: underline;
   }
@@ -26,9 +38,6 @@ main {
 .section-title {
   font-size: 3rem;
   text-align: center;
-}
-@mixin easeOut {
-  transition: all 0.5s ease-out;
 }
 
 @mixin MediaMd {

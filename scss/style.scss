@@ -44,7 +44,7 @@ nav {
   }
   @include easeOut;
   &.navigation__fixed-background {
-    background-color: #cccccc;
+    background-color: $grey;
   }
   .logo {
     padding-left: 15rem;
@@ -54,6 +54,10 @@ nav {
     list-style: none;
     gap: 3rem;
     padding-right: 15rem;
+    li {
+      color: black;
+      font-size: large;
+    }
   }
 }
 
@@ -124,18 +128,16 @@ main {
   }
 }
 footer {
-  background-color: #999999;
+  background-color: $grey-secondary;
   margin-bottom: 0;
   margin-right: auto;
   padding: 2rem;
-  .footer__container {
-    max-width: 80%;
-  }
+  padding-left: 15rem;
   .footer__container--list {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid white;
-    padding-right: 7rem;
+    padding-right: 10rem;
     ul {
       list-style: none;
       li {

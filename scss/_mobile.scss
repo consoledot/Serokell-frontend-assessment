@@ -10,13 +10,13 @@
   nav {
     flex-direction: column;
     &.show {
-      background-color: #cccccc;
+      background-color: $grey;
     }
     ul {
       display: none;
       width: 100%;
       flex-direction: column;
-      background-color: #cccccc;
+      background-color: $grey;
       padding: 1rem;
       &.show {
         display: flex;
@@ -94,8 +94,9 @@
     }
   }
   footer {
+    padding: 0.5rem;
     .footer__container--list {
-      padding-right: 2rem;
+      padding-right: 0rem;
       flex-direction: column;
       ul {
         li {
